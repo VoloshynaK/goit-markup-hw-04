@@ -49,7 +49,6 @@ button {
 }
 
 .container { 
-    align-items: center;
     margin: 0 auto;
     width: 1158px;
     padding: 0 15px;
@@ -152,7 +151,7 @@ button {
 /* hero */
 
 .hero {
-    /* background-color: var(--primary-title-color); */
+    background-color: var(--primary-title-color);
     height: 600px;
     max-width: 1440px;
     margin-left: auto;
@@ -267,6 +266,9 @@ button {
 }
 
 /* section what are we doing */
+.section.services {
+    padding-top: 0;
+}
 .services-list {
     display: flex;
     margin-top: 72px;
@@ -302,7 +304,11 @@ button {
     display: flex;
 }
 .sm-box {
-    display: inline-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
     padding: 12px;
     border-radius: 50%;
     background-color: var(--accent-color);
@@ -336,15 +342,19 @@ button {
 }
 
 .customers-item-link {
-    display: inline-flex;
-    padding: 16px 32px;
-    border: 1px solid var(--customer-logo-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 168px;
+    height: 88px;
+    border: 1px solid currentColor;
     border-radius: 4px;
+    color: var(--customer-logo-color);
 }
 
 .customers-item-link:hover,
 .customers-item-link:focus {
-    border: 1px solid var(--accent-focus-color);
+    color: var(--accent-focus-color);
 }
 .customers-item-link:hover > .customers-logo,
 .customers-item-link:focus > .customers-logo {
@@ -355,6 +365,8 @@ button {
 /* footer */
 .footer{
     background-color: var(--primary-title-color);
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .block-logo {
@@ -372,9 +384,6 @@ button {
 
 .footer-content{
     display: flex;
-    align-items: flex-start;
-    padding-top: 100px;
-    padding-bottom: 100px;
 }
 .footer-descr {
     width: 264px;
@@ -456,11 +465,12 @@ button {
     margin-bottom: 48px;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
-
-.portfolio-list .item:hover,
-.portfolio-list .item:focus {
+.portfolio-link {
+    display: block;
+}
+.portfolio-link:hover,
+.portfolio-link:focus {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-    cursor: pointer;
 }
 
 .portfolio-list .item:nth-child(3n){
